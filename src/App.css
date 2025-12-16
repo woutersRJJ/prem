@@ -1,38 +1,102 @@
-.App {
-  text-align: center;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* FLOATING GRID */
+.team-container {
+    width: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+/* ========== TEAM CARDS ========== */
+
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.team-card {
+    width: 400px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    text-align: center;
 }
+
+.team-logo {
+    height: 75px; /* adjust as needed */ width: auto;
+}
+
+.team-header {
+    align-items: center; /* vertical alignment */
+    gap: 10px; /* space between logo and text */
+}
+
+/*.team-header h2{
+    flex: 1; !* take all remaining space *! text-align: center; !* center the text *!
+}*/
+
+
+
+/* ========== LEGEND PANEL en CLUB PANEL ========== */
+
+.legend-panel, .club-panel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+}
+
+/* Buttons */
+.legend-panel button,
+.club-panel button {
+    padding: 0.35rem 0.6rem;
+    font-size: 1rem;
+    border: none;
+    background: #e8e8e8;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+
+.legend-panel button:hover,
+.club-panel button:hover {
+    background: #d4d4d4;
+}
+
+.legend-info , .club-info  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+    min-width: 150px;
+
+    /* Smooth fade + slide */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.legend-info p, .club-info p {
+    margin: 0;
+    font-weight: 600;
+}
+
+
+
+
+
+
